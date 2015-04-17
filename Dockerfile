@@ -7,11 +7,9 @@ RUN sed -ri 's/"UTC"/"Asia\/Tokyo"/g' /etc/sysconfig/clock
 RUN sed -ri 's/true/false/g' /etc/sysconfig/clock
 RUN sed -ri 's/en_US/ja_JP/g' /etc/sysconfig/i18n
 
-# System Update
+# System Update & Install
 RUN yum -y update
-RUN yum -y install git
-RUN yum -y install nginx
-RUN yum -y install php php-fpm
+RUN yum -y install vim nginx php55-cli php55-common php55-fpm php55-gd php55-intl php55-mbstring php55-mcrypt php55-mysqlnd php55-pdo php55-pecl-http php55-pecl-jsonc php55-pecl-oauth php55-xml php55-xmlrpc php55-opcache
 
 # ADD key & template
 ADD ./key /home/ec2-user/.ssh/
