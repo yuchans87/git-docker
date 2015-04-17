@@ -5,9 +5,10 @@ Usage:
 * sudo yum install -y git docker nginx
 * sudo service docker start
 * sudo docker pull yuchans87/amazn:v0.1
-* mkdir DIR
-* cd DIR/
 * git clone git@github.com:yuchans87/git-docker.git
+* cd git-docker
+* mkdir key
+* cp IdentitiFIles key/aurhorized_keys
 
 * sudo docker build -t REPO:TAG .
 * sudo docker run -d -p 22 -p 80 REPO:TAG
