@@ -3,7 +3,7 @@
 TEMPLATE_CONF="./docker.template"
 CONF_FILE="/etc/nginx/conf.d/docker.conf"
 
-CONTAINER_ID=`sudo docker ps|tail -1|awk '{print $1}'`
+CONTAINER_ID=`sudo docker ps|head -2|tail -1|awk '{print $1}'`
 
 DOCKER_NGINX_PORT=`sudo docker inspect -f '{{(index (index .NetworkSettings.Ports "80/tcp") 0).HostPort}}' $CONTAINER_ID`
 
