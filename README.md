@@ -6,11 +6,11 @@ Usage:
 * sudo service docker start
 * sudo docker pull yuchans87/amazn:v0.1
 * git clone git@github.com:yuchans87/git-docker.git
+ * You must be able to access to github.
 * cd git-docker
 * mkdir key
-* cp IdentitiFIles key/aurhorized_keys
-
+* cp IdentityFIles key/aurhorized_keys
+ * ssh-keygen -t rsa
 * sudo docker build -t REPO:TAG .
 * sudo docker run -d -p 22 -p 80 REPO:TAG
-
 * /bin/sh ./nginx_docker_port_setting.sh
