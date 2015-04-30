@@ -1,6 +1,7 @@
 <?php
 $LOG_FILE = '/var/log/payload/hook.log';
-$secret = '7Aar9SRcV6PKy';
+// $secret = '7Aar9SRcV6PKy';
+$secret = 'error';
 
 $headers = getallheaders();
 $hubSignature = $headers['X-Hub-Signature'];
