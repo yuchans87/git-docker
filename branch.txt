@@ -6,3 +6,6 @@
 18:34 Deploy/test dev branch refs
 18:43 Deploy/test dev branch refs 3
 18:59 Deploy/test master branch date check
+
+2015-05-13
+14:43 Deploy/test branch case
