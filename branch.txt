@@ -4,6 +4,7 @@
 18:22 Deploy/test master branch2
 18:27 Deploy/test dev branch
 18:34 Deploy/test dev branch refs
+<<<<<<< HEAD
 18:43 Deploy/test dev branch refs 3
 18:59 Deploy/test master branch date check
 
@@ -12,3 +13,6 @@
 14:50 Deploy/test branch case 2
 18:39 Deploy/test ssh2_exec test
 18:52 Deploy/test ssh2_exec test Key
+=======
+18:43 Deploy/test dev branch refs 3
+>>>>>>> dev
