@@ -1,4 +1,4 @@
-FROM yuchans87/amazn:v0.1
+FROM 172.17.42.1:5000/news2u/amazn:0.1
 MAINTAINER yuchans87 yuichi@news2u.co.jp
 
 # Init System
@@ -37,8 +37,13 @@ RUN cp /tmp/service.ini /etc/supervisord.d/conf/service.ini
 RUN cp /tmp/supervisord /etc/init.d/supervisord
 RUN chmod 0755 /etc/init.d/supervisord
 
+# nginx & php-fpm
+RUN cp /tmp/nginx.conf /etc/nginx/nginx.conf
+RUN cp /tmp/www.conf /etc/php-fpm.d/www.conf
+RUN sed -ri 's/;date.timezone =/date.timezone = "Asia\/Tokyo"/g' /etc/php.ini
+
 # Add Contents
-ADD ./app /usr/share/nginx/html/
+#ADD ./app /usr/share/nginx/html/
 
 EXPOSE 22 80
 CMD /usr/local/bin/supervisord -c /etc/supervisord.conf
