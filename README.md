@@ -9,7 +9,7 @@ Usage:
  * You must be able to access to github.
 * cd git-docker
 * mkdir key
-* cp IdentityFIles key/aurhorized_keys
+* cp IdentityFIles key/authorized_keys
  * ssh-keygen -t rsa
 * sudo docker build -t REPO:TAG .
 * sudo docker run -d -p 22 -p 80 REPO:TAG
